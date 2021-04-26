@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="./far.ico">
+
+  <title>Team. 화공 서버상태</title>
+
+  <!-- Facebook & Discord -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="">
+  <meta property="og:title" content="Team. 화공 서버상태">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/544850440450473994/553128452429971486/Team_.jpg">
+  <meta property="og:description" content="저희 팀과 관련한 서비스 상태를 확인 가능합니다!">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" value="Team. 화공 서버상태">
+  <meta name="twitter:description" value="저희 팀과 관련한 서비스 상태를 확인 가능합니다!">
+  <meta name="twitter:image" value="https://cdn.discordapp.com/attachments/544850440450473994/553128452429971486/Team_.jpg">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Team. 화공</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#status">서비스</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#ping">시스템</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#errors">최근 문제</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#counter">방문 집계</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Team. 화공 서버상태 페이지에 오신것을 환영합니다</h1>
+      <p class="lead">해당 페이지는 테스트 중에 있습니다! 오류가 발생하면 저희 팀에게 알려주세요!</p>
+    </div>
+  </header>
+
+  <section id="status">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>서비스</h2>
+          <p class="lead">이곳에서 저희팀이 서비스중인 모든 봇에 대한 정보를 보실 수 있습니다.</p>
+          <br>
+          <!--
+            ping < 0ms :: gray
+            0ms < ping < 300ms :: green
+            300ms < ping < 500ms :: orange
+            500ms < ping :: red
+          -->
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>종류</th>
+                <th>명칭</th>
+                <th>상태</th>
+                <th>최근 응답시간</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>종류</th>
+                <th>명칭</th>
+                <th>상태</th>
+                <th>최근 응답시간</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>웹사이트</td>
+                <td>홈페이지</td>
+                <td><font color="green">온라인</font></td>
+                <td><font color="orange">435ms</font></td>
+              </tr>
+              <tr>
+                <td>연계 시스템</td>
+                <td>한글시계 이미지 업로더</td>
+                <td><font color="green">온라인</font></td>
+                <td><font color="red">821ms</font></td>
+              </tr>
+              <tr>
+                <td>디스코드 봇</td>
+                <td>루탑봇</td>
+                <td><font color="green">온라인</font></td>
+                <td><font color="green">135ms</font></td>
+              </tr>
+              <tr>
+                <td>디스코드 봇</td>
+                <td>화냥봇</td>
+                <td><font color="red">오프라인</font></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>디스코드 봇</td>
+                <td>DW봇</td>
+                <td><font color="gray">개발중</font></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>디스코드 봇</td>
+                <td>팀 샐러드봇</td>
+                <td><font color="gray">개발중</font></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ping" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>시스템 정보</h2>
+          <p class="lead">팀과 관련한 시스템의 정보를 확인할 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">봇 서버 응답시간</h6>
+        </div>
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas id="Botserver"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">홈페이지 응답시간</h6>
+        </div>
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas id="Homepage"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="errors">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>최근 문제</h2>
+          <p class="lead">이곳에서 최근 서버에서 발생한 문제를 확인하세요!<br>차트는 오래된순부터 보여집니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- DataTales -->
+    <div class="container">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">최근 문제</h6>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>일자</th>
+                <th>구분</th>
+                <th>문제가 발생한 위치</th>
+                <th>설명</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>일자</th>
+                <th>구분</th>
+                <th>문제가 발생한 위치</th>
+                <th>설명</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>2019/02/16 20:00~20:02 KST</td>
+                <td><font color="red">다운</font></td>
+                <td>봇 서버</td>
+                <td>알 수 없는 이유로 봇 서버가 다운되었습니다.</td>
+              </tr>
+              <tr>
+                <td>2019/01/16 16:00~16:15 KST</td>
+                <td><font color="red">다운</font></td>
+                <td>홈페이지</td>
+                <td>접속자 과다로 홈페이지가 다운되었습니다.</td>
+              </tr>
+              <tr>
+                <td>2019/01/12 10:49~13:08 PST</td>
+                <td><font color="red">다운</font></td>
+                <td>디스코드 API</td>
+                <td>일시적으로 디스코드 API가 다운되었습니다.</td>
+              </tr>
+              <tr>
+                <td>2018/12/05 16:00~16:10 KST</td>
+                <td><font color="orange">점검</font></td>
+                <td>봇 서버</td>
+                <td>봇 서버 점검이 10분가량 진행되었습니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="counter" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>방문 집계</h2>
+          <p class="lead"></p>
+          <br>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Today</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>25</th>
+                <th>4,465</th>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Today</th>
+                <th>Total</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">&copy; 2017-2019 <a href="https://hwahyang.xyz">화향</a>, 2018-2019 <a href="https://rutapofficial.xyz">Team 화공</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/chart-graph.js"></script>
+  <script src="js/table_errors.js"></script>
+
+  <script>
+    // Graph Chart //
+
+    // Bot Server Ping
+    var ctx = document.getElementById("Botserver");
+    var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["1시간 전", "55분 전", "50분 전", "45분 전", "40분 전", "35분 전", "30분 전", "25분 전", "20분 전", "15분 전", "10분 전", "5분 전", "방금 전"],
+        datasets: [{
+          label: "응답시간",
+          lineTension: 0.3,
+          backgroundColor: "rgba(78, 115, 223, 0.05)",
+          borderColor: "rgba(78, 115, 223, 1)",
+          pointRadius: 3,
+          pointBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointBorderColor: "rgba(78, 115, 223, 1)",
+          pointHoverRadius: 3,
+          pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          data: [415, 463, 942, 351, 642, 712, 841, 612, 725, 945, 852, 752, 452],
+        }],
+      },
+      options: {
+        maintainAspectRatio: false,
+        layout: {
+          padding: {
+            left: 10,
+            right: 25,
+            top: 25,
+            bottom: 0
+          }
+        },
+        scales: {
+          xAxes: [{
+            time: {
+              unit: 'date'
+            },
+            gridLines: {
+              display: false,
+              drawBorder: false
+            },
+            ticks: {
+              maxTicksLimit: 7
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              maxTicksLimit: 5,
+              padding: 10,
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                //return number_format(value) + 'ms';
+                return number_format(value);
+              }
+            },
+            gridLines: {
+              color: "rgb(234, 236, 244)",
+              zeroLineColor: "rgb(234, 236, 244)",
+              drawBorder: false,
+              borderDash: [2],
+              zeroLineBorderDash: [2]
+            }
+          }],
+        },
+        legend: {
+          display: false
+        },
+        tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          titleMarginBottom: 10,
+          titleFontColor: '#6e707e',
+          titleFontSize: 14,
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          intersect: false,
+          mode: 'index',
+          caretPadding: 10,
+          callbacks: {
+            label: function(tooltipItem, chart) {
+              var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              return datasetLabel + ' : ' + number_format(tooltipItem.yLabel) + 'ms';
+            }
+          }
+        }
+      }
+    });
+    
+    // Homepage ping
+    var ctx = document.getElementById("Homepage");
+    var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["1시간 전", "55분 전", "50분 전", "45분 전", "40분 전", "35분 전", "30분 전", "25분 전", "20분 전", "15분 전", "10분 전", "5분 전", "방금 전"],
+        datasets: [{
+          label: "응답시간",
+          lineTension: 0.3,
+          backgroundColor: "rgba(78, 115, 223, 0.05)",
+          borderColor: "rgba(78, 115, 223, 1)",
+          pointRadius: 3,
+          pointBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointBorderColor: "rgba(78, 115, 223, 1)",
+          pointHoverRadius: 3,
+          pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          data: [452, 783, 453, 782, 156, 762, 465, 783, 486, 186, 783, 1245, 435],
+        }],
+      },
+      options: {
+        maintainAspectRatio: false,
+        layout: {
+          padding: {
+            left: 10,
+            right: 25,
+            top: 25,
+            bottom: 0
+          }
+        },
+        scales: {
+          xAxes: [{
+            time: {
+              unit: 'date'
+            },
+            gridLines: {
+              display: false,
+              drawBorder: false
+            },
+            ticks: {
+              maxTicksLimit: 7
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              maxTicksLimit: 5,
+              padding: 10,
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                //return number_format(value) + 'ms';
+                return number_format(value);
+              }
+            },
+            gridLines: {
+              color: "rgb(234, 236, 244)",
+              zeroLineColor: "rgb(234, 236, 244)",
+              drawBorder: false,
+              borderDash: [2],
+              zeroLineBorderDash: [2]
+            }
+          }],
+        },
+        legend: {
+          display: false
+        },
+        tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          titleMarginBottom: 10,
+          titleFontColor: '#6e707e',
+          titleFontSize: 14,
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          intersect: false,
+          mode: 'index',
+          caretPadding: 10,
+          callbacks: {
+            label: function(tooltipItem, chart) {
+              var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              return datasetLabel + ' : ' + number_format(tooltipItem.yLabel) + 'ms';
+            }
+          }
+        }
+      }
+    });
+    </script>
+
+</body>
+
+</html>
